@@ -1,0 +1,4 @@
+Hello	Xin chao
+Dog	Con cho
+Cat	Con meo
+Human	Con nguoi
