@@ -35,11 +35,6 @@ public class DictionaryManagement {
         }
     }
 
-    public void dictionaryBasic() {
-        insertFromCommandline();
-        showAllWords();
-    }
-
     public List<Word> insertFromFile() {
         FileReader fr = null;
         BufferedReader br = null;
@@ -80,5 +75,45 @@ public class DictionaryManagement {
             e.printStackTrace();
         }
     }
+
+    /**
+     * ham look up la ham void se yeu cau nhap tu can tim va in giai nghia ra console.
+     * tim kiem tuan tu(chua toi uu).
+     */
+    public void dictionaryLookup() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter word to look up: ");
+        String word = sc.next();
+        for (Word temp: dictionary.listWords) {
+            String thisWord = temp.getWordTarget();
+            if (thisWord.equals(word)) {
+                System.out.println("\nVietnamese meaning of " + word + " is: " + temp.getWordExplain() + "\n");
+                return;
+            }
+        }
+        System.out.println("No word found!");
+    }
+
+    public void dictionarySearcher() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter sequence of char to search: ");
+        String sequence = sc.next();
+        ArrayList <Word> result = new ArrayList <Word> ();
+        for (Word temp: dictionary.listWords) {
+            String thisWord = temp.getWordTarget();
+            if (thisWord.contains(sequence)) {
+                result.add(temp);
+            }
+        }
+        if (result.size() == 0) {
+            System.out.println("No word response!");
+        } else {
+            System.out.println("There are " + result.size() + " words response:");
+            for (Word temp: result) {
+                System.out.println(temp.getWordTarget());
+            }
+        }
+    }
+
 
 }
