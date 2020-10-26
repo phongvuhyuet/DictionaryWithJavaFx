@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OCRHandleController">
+   <children>
+      <TextArea fx:id="textArea" layoutX="76.0" layoutY="21.0" prefHeight="142.0" prefWidth="691.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="btTranslate" layoutX="341.0" layoutY="354.0" mnemonicParsing="false" onAction="#Translate" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #c6c386;" text="Translate">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TextArea fx:id="txtResult" layoutX="76.0" layoutY="173.0" prefHeight="174.0" prefWidth="691.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="27.0" layoutY="82.0" text="Text">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="250.0" prefHeight="20.0" prefWidth="55.0" text="Result">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

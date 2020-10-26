@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="600.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <Menu mnemonicParsing="false" text="Add Word">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#addWordEV" text="Add to EV Dictionary" />
+                        <MenuItem mnemonicParsing="false" onAction="#addWordVE" text="Add to VE Dictionary" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Delete Word">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#deleteWordEV" text="Delete Word from EV Dictionary" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteWordVE" text="Delete Word from VE Dictionary" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Update Word">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#updateWordEV" text="Update Word from EV Dictionary" />
+                        <MenuItem mnemonicParsing="false" onAction="#updateWordVE" text="Update Word from VE Dictionary" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Advanced">
+               <items>
+                  <Menu mnemonicParsing="false" text="Translate">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#getTextTranslateEV" text="English to Vietnamese" />
+                        <MenuItem mnemonicParsing="false" onAction="#getTextTranslateVE" text="Vietnamese to English" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Image to Text">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#getTextEnglish" text="English" />
+                        <MenuItem mnemonicParsing="false" onAction="#getTextVietnamese" text="Vietnamese" />
+                    </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutUs" text="About us" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <AnchorPane maxHeight="575.0" maxWidth="900.0" prefHeight="575.0" prefWidth="900.0" style="-fx-background-color: #0892d0;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="76.0" layoutY="42.0" onKeyPressed="#OnEnter" onKeyReleased="#searchWord" prefHeight="41.0" prefWidth="718.0" styleClass="text-field" AnchorPane.rightAnchor="106.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <Button fx:id="btnBack" layoutX="20.0" layoutY="43.0" mnemonicParsing="false" onMouseClicked="#backButtonHandle" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: #c6c386;" text="🢀" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="16.0" />
+               </font>
+            </Button>
+            <ListView fx:id="lvWords" layoutX="14.0" layoutY="95.0" onKeyPressed="#handleEnterLVWord" onMouseClicked="#displaySelected" prefHeight="463.0" prefWidth="225.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="661.0" AnchorPane.topAnchor="95.0" />
+            <WebView fx:id="webView" layoutX="264.0" layoutY="95.0" prefHeight="461.0" prefWidth="609.0" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="27.0" />
+            <ComboBox fx:id="cbLanguage" layoutX="724.0" layoutY="8.0" onAction="#selectLanguage" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: #c6c386;" AnchorPane.rightAnchor="14.666666666666629" />
+            <Button fx:id="btnSpeaker" layoutX="814.0" layoutY="42.0" mnemonicParsing="false" onAction="#speak" prefHeight="41.0" prefWidth="41.0" style="-fx-background-color: #c6c386;" AnchorPane.rightAnchor="44.66666666666663" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

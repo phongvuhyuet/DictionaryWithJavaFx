@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="328.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AboutUsController">
+   <children>
+      <Button layoutX="266.0" layoutY="256.0" mnemonicParsing="false" onAction="#backbt" prefHeight="32.0" prefWidth="67.0" style="-fx-background-color: #c6c386;" text="Trở về">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label alignment="TOP_CENTER" layoutX="82.0" layoutY="14.0" prefHeight="17.0" prefWidth="416.0" text="Thank for using our production!">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="208.0" layoutY="68.0" text="JTEAM from K64 - CJ">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="106.0" text="Leader">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="146.0" text="Member">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="191.0" text="Member">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="107.0" text="Nguyễn Văn Quỳnh">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="148.0" text="Vũ Văn Phong">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="192.0" text="Đỗ Tiến Đạt">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="109.0" text="Project Leader, Coder, Algorithm, Designer">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="150.0" text="Coder + Designer + Algorithm">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="192.0" text="Coder + Designer + Algorithm">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

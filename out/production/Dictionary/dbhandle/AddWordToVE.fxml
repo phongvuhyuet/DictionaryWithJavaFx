@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="477.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbhandle.AddWordToVEController">
+   <children>
+      <Label fx:id="lblEnglish" layoutX="110.0" layoutY="125.0" text="English">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVietnamese" layoutX="110.0" layoutY="74.0" text="Vietnamese">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="111.0" layoutY="178.0" text="Description">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtVietnamese" layoutX="221.0" layoutY="72.0" prefHeight="25.0" prefWidth="593.0" />
+      <TextField fx:id="txtEnglish" layoutX="221.0" layoutY="122.0" prefHeight="25.0" prefWidth="593.0" />
+      <TextArea fx:id="txtDescription" layoutX="221.0" layoutY="178.0" prefHeight="240.0" prefWidth="593.0" />
+      <Button fx:id="btnAdd" layoutX="408.0" layoutY="427.0" mnemonicParsing="false" onAction="#addNewWord" style="-fx-background-color: #c6c386;" text="Add">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
